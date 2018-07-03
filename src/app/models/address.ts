@@ -1,5 +1,4 @@
 import { Coordinate } from './coordinates';
-
 export class Address {
     street: string;
     suite: string;

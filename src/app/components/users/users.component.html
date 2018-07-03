@@ -1,0 +1,19 @@
+<table *ngIf="users && users.length > 0">
+  <thead>
+    <tr><td colspan="4">Lista de usuarios</td></tr>
+    <tr>
+      <td>Id</td>
+      <td>Username</td>
+      <td>Email</td>
+      <td>Telefono</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users" (click)="setUbicacion(user)">
+      <td>{{user.id}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.phone}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Person } from './models/person';
+import { MapComponent } from './components/map/map.component';
+import { UsersComponent } from './components/users/users.component';
 
 @Component({
   selector: 'app-root',

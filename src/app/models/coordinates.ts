@@ -1,6 +1,6 @@
 export class Coordinate {
-    lat:number;
-    lng: number;
+    lat: string;
+    lng: string;
     constructor() {
         
     }

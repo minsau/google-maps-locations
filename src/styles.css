@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+  color: #333;
+}
+
+.container{
+  padding-top: 1rem;
+  width: 94%;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+.row{
+  width: 96%;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+}
+
+.col-6{
+  width: 50%;
+  height: auto;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  margin: 0 auto;
+}
