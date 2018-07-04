@@ -4,8 +4,7 @@ import { MapService } from '../../services/map.service';
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
-  styleUrls: ['./map.component.css'],
-  providers: [MapService]
+  styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
   gmapElement: ElementRef;
@@ -13,15 +12,12 @@ export class MapComponent implements OnInit {
   constructor(private _map: MapService) { }
 
   ngOnInit() {
-    this.initActions();
-  }
-
-  initActions(){
     this.setCenter();
   }
 
   setCenter(){
-    this._map._center.subscribe(
+    console.log('Sí se subscribe');
+    this._map.getCenter().subscribe(
       (coords: any) => {
         console.log(coords)
         this.map.setCenter(coords);

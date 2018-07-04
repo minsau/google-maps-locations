@@ -1,12 +1,12 @@
 import { Injectable, ElementRef } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MapService {
   public map: google.maps.Map;
-  _center = new Subject();
+  private _center = new Subject<any>();
   constructor() { }
 
   createScript(){
@@ -31,7 +31,7 @@ export class MapService {
       this.createScript().onload = () => {
         const mapProps = {
           center: new google.maps.LatLng(lat, lng),
-          zoom: 15,
+          zoom: 10,
           gestureHandling: <any> 'greedy',
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -45,7 +45,10 @@ export class MapService {
 
   setCenter(lat, lng){
     const coords = new google.maps.LatLng(lat, lng);
-    console.log(coords);
     this._center.next(coords);
+  }
+
+  getCenter(): Observable<any>{
+    return this._center.asObservable();
   }
 }

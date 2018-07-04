@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
 import { UsersComponent } from './components/users/users.component';
+import { MapService } from './services/map.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { UsersComponent } from './components/users/users.component';
     BrowserModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [MapService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

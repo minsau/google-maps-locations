@@ -25,7 +25,6 @@ export class UsersComponent implements OnInit {
   }
 
   setUbicacion(user: Person){
-    console.log(user)
-    this._map.setCenter(parseFloat(user.address.geo.lat), parseFloat(user.address.geo.lng));
+    this._map.setCenter(parseFloat(user.address.geo.lng), parseFloat(user.address.geo.lat));
   }
 }
